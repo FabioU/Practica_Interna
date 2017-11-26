@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var testtable = require('./routes/testtable');
 var tournaments = require('./routes/tournaments');
-var examples = require('./routes/example');
+var create = require('./routes/create');
 
 
 var mysql = require('mysql');
@@ -42,7 +42,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/testtable', testtable);
 app.use('/torneos', tournaments);
-app.use('/ejemplo', examples);
+app.use('/create', create);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crear</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative; 
+  }
+  #create_team {padding-top:100px;height:500px;color: #fff; background-color: #1E88E5;}
+  #create_tournament {padding-top:100px;height:500px;color: #fff; background-color: #673ab7;}
+  #create_fixture {padding-top:100px;height:500px;color: #fff; background-color: #ff9800;}
+  #create_discipline {padding-top:100px;height:500px;color: #fff; background-color: #00bcd4;}
+  #create_athlete {padding-top:100px;height:500px;color: #fff; background-color: #009688;}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/">Inicio</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#create_team">Crear Equipos</a></li>
+          <li><a href="#create_tournament">Crear Torneo</a></li>
+          <li><a href="#create_fixture">Crear Fixture</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Extras <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#create_discipline">Disciplina</a></li>
+              <li><a href="#create_athlete">Deportista</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+<!-- Create teams-->
+<div id="create_team" class="container-fluid">
+  <h1>Equipos</h1>
+   <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="name">Nombre</label>
+    <input class="form-control" id="nombre_t" type="text" placeholder="Ingrese el nombre del equipo">
+  </div>
+  <div class="col-xs-2">
+    <label for="disc">Disciplina</label>
+    <input class="form-control" id="disc" type="text" placeholder="Ingrese la disciplina">
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="number_p">Cantidad</label>
+    <input class="form-control" id="number_p" type="text" placeholder="Ingrese la cantidad de jugadores">
+  </div>
+  <div class="col-xs-2">
+    <label for="color">Color</label>
+    <input class="form-control" id="color" type="text" placeholder="Ingrese el color de uniforme del equipo">
+  </div>
+  </div>
+ </p>
+   <button type="button" id="insert_team" class="btn btn-default">Insertar</button>
+</div>
+<!-- Create tournaments-->
+<div id="create_tournament" class="container-fluid">
+  <h1>Torneos</h1>
+  <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="name_tour">Nombre</label>
+    <input class="form-control" id="name_tour" type="text" placeholder="Ingrese el nombre del torneo">
+  </div>
+  <div class="col-xs-2">
+    <label for="disc_tour">Disciplina</label>
+    <input class="form-control" id="disc_tour" type="text" placeholder="Ingrese la disciplina">
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="gestion">Gestion</label>
+    <input class="form-control" id="gestion" type="text" placeholder="Ingrese la gestion (Año)">
+  </div>
+    <div class="col-xs-2">
+    <label for="semestre">Semestre</label>
+    <input class="form-control" id="semestre" type="text" placeholder="Ingrese el semestre (Primero, Segundo)">
+  </div>
+  <div class="col-xs-2">
+    <label for="tipo">Tipo</label>
+    <input class="form-control" id="tipo" type="text" placeholder="(masculino, femenino, mixto)">
+  </div>
+</div>
+</p>
+   <button type="button" id= "insert_tournament"class="btn btn-default">Insertar</button>
+</div>
+<!-- Create fixture-->
+<div id="create_fixture" class="container-fluid">
+  <h1>Fixure</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="create_discipline" class="container-fluid">
+  <h1>Disciplina</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="create_athlete" class="container-fluid">
+  <h1>Deportista</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+</body>
+</html>
