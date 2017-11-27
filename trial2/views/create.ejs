@@ -101,7 +101,7 @@
   </div>
   </div>
  </p>
-   <button type="button" id="insert_team" class="btn btn-default">Insertar</button>
+   <button type="button" id="insert_team" class="btn btn-default" onclick="insertar()">Insertar</button>
 </div>
 
 <!-- Create tournaments-->
@@ -132,7 +132,7 @@
   </div>
 </div>
 </p>
-   <button type="button" onclick='login()' id= "insert_tournament"class="btn btn-default">Insertar</button>
+   <button type="button" id= "insert_tournament" class="btn btn-default" onclick="insertarTorneo()">Insertar</button>
 </div>
 
 <!-- Create fixture-->
@@ -150,7 +150,7 @@
   </div>
   </div>
   </p>
-  <button type="button" id= "insert_discipline"class="btn btn-default">Insertar</button>  
+  <button type="button" id= "insert_discipline" class="btn btn-default" onclick="insertarDisciplina()">Insertar</button>  
 </div>
 
 <!-- Create athlete-->
@@ -181,9 +181,41 @@
   </div>
   </div>
   </p>
-  <button type="button" id= "insert_athlete"class="btn btn-default">Insertar</button>
+  <button type="button" id= "insert_athlete" class="btn btn-default" onclick="insertarDeportista()">Insertar</button>
 </div>
 
+<script>
+	function insertar(){
+		var v_discT = document.getElementById("disc").value;
+		var v_cantJugT = document.getElementById("number_p").value;
+		var v_nomT = document.getElementById("nombre_t").value;
+		var v_colT = document.getElementById("color").value;
+		return location.href = "/create?discT="+v_discT+"&numberT="+v_cantJugT+"&nombreT="+v_nomT+"&colorT="+v_colT;
+	}
+	function insertarTorneo(){
+		var v_discTour = document.getElementById("disc_tour").value;
+		var v_nomTour = document.getElementById("name_tour").value;
+		var v_gesTour = document.getElementById("gestion").value;
+		var v_semTour = document.getElementById("semestre").value;
+		var v_tipoTour = document.getElementById("tipo").value;
 
+		return location.href = "/create?discTour="+v_discTour+"&nomTour="+v_nomTour+"&gesTour="+v_gesTour+"&semTour="+v_semTour+"&tipoTour="+v_tipoTour;
+	}
+	function insertarDisciplina(){
+		var v_nomDisc = document.getElementById("name_discipline").value;
+		return location.href = "/create?nomDisc="+v_nomDisc;
+	}
+	function insertarDeportista(){
+		var v_codEstDepor = document.getElementById("student_code").value;
+		var v_discDepor = document.getElementById("a_discipline").value;
+		var v_equipoDepor = document.getElementById("a_equipo").value;
+		var v_punDepor = document.getElementById("a_points").value;
+		var v_amonDepor = document.getElementById("a_banns").value;
+
+		return location.href = "/create?codEstDepor="+v_codEstDepor+"&discDepor="+v_discDepor+"&equipoDepor="+v_equipoDepor+"&punDepor="+v_punDepor+"&tipoTour="+v_amonDepor;
+	}
+
+
+</script>
 </body>
 </html>
