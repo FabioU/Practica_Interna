@@ -17,8 +17,37 @@
   #create_discipline {padding-top:50px;height:300px;color: #fff; background-color: #00bcd4;}
   #create_athlete {padding-top:100px;height:500px;color: #fff; background-color: #009688;}
   </style>
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '531506943868882',
+      xfbml            : true,
+      version          : 'v2.11'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+  function login(){
+    FB.getLoginStatus(function(response){
+      if (response.status == 'connected'){
+          FB.api('/me/feed', 'post',{message: 'logre publicar algo asufafa'}, function(response){
+          document.getElementById('create_tournament').innerHTML = response.id;
+        })
+      }else 
+      FB.login();
+    },{scope: 'publish_actions'});
+   }
+</script>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -103,7 +132,7 @@
   </div>
 </div>
 </p>
-   <button type="button" id= "insert_tournament"class="btn btn-default">Insertar</button>
+   <button type="button" onclick='login()' id= "insert_tournament"class="btn btn-default">Insertar</button>
 </div>
 
 <!-- Create fixture-->
@@ -154,6 +183,7 @@
   </p>
   <button type="button" id= "insert_athlete"class="btn btn-default">Insertar</button>
 </div>
+
 
 </body>
 </html>
