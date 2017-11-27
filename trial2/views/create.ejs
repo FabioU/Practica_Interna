@@ -72,7 +72,7 @@
   </div>
   </div>
  </p>
-   <button type="button" id="insert_team" class="btn btn-default" onclick="location.href='/create?disc=';">Insertar</button>
+   <button type="button" id="insert_team" class="btn btn-default" onclick="insertar()">Insertar</button>
 </div>
 
 <!-- Create tournaments-->
@@ -156,8 +156,13 @@
 </div>
 
 <script>
-	
-	
+	function insertar(){
+		var v_disc = document.getElementById("disc").value;
+		var v_cantJug = document.getElementById("number_p").value;
+		var v_nom = document.getElementById("nombre_t").value;
+		var v_col = document.getElementById("color").value;
+		return location.href = "/create?discT="+v_disc+"&numberT="+v_cantJug+"&nombreT="+v_nom+"&colorT="+v_col;
+	}
 </script>
 
 </body>
