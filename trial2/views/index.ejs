@@ -16,6 +16,35 @@
     <link rel="stylesheet" href="../stylesheets/style.css">
   </head>
   <body>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '531506943868882',
+      xfbml            : true,
+      version          : 'v2.11'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+  function login(){
+    FB.getLoginStatus(function(response){
+      if (response.status == 'connected'){
+          FB.api('/me/feed', 'post',{message: 'logre publicar algo asufafa'}, function(response){
+          document.getElementById('demo').innerHTML = response.id;
+        })
+      }else 
+      FB.login();
+    },{scope: 'publish_actions'});
+   }
+</script>
+    <p id="demo"></p>
      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,6 +77,7 @@
         </form>
       </div>
     </nav>
+    <button onclick="login()">Publicar</button>
 
     <main role="main" class="container">
 
