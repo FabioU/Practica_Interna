@@ -14,7 +14,7 @@
   #create_team {padding-top:100px;height:500px;color: #fff; background-color: #1E88E5;}
   #create_tournament {padding-top:100px;height:500px;color: #fff; background-color: #673ab7;}
   #create_fixture {padding-top:100px;height:500px;color: #fff; background-color: #ff9800;}
-  #create_discipline {padding-top:100px;height:500px;color: #fff; background-color: #00bcd4;}
+  #create_discipline {padding-top:50px;height:300px;color: #fff; background-color: #00bcd4;}
   #create_athlete {padding-top:100px;height:500px;color: #fff; background-color: #009688;}
   </style>
 </head>
@@ -47,6 +47,7 @@
     </div>
   </div>
 </nav>    
+
 <!-- Create teams-->
 <div id="create_team" class="container-fluid">
   <h1>Equipos</h1>
@@ -73,6 +74,7 @@
  </p>
    <button type="button" id="insert_team" class="btn btn-default">Insertar</button>
 </div>
+
 <!-- Create tournaments-->
 <div id="create_tournament" class="container-fluid">
   <h1>Torneos</h1>
@@ -103,21 +105,54 @@
 </p>
    <button type="button" id= "insert_tournament"class="btn btn-default">Insertar</button>
 </div>
+
 <!-- Create fixture-->
 <div id="create_fixture" class="container-fluid">
-  <h1>Fixure</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <h1>Fixture</h1>
 </div>
+
+<!-- Create discipline-->
 <div id="create_discipline" class="container-fluid">
   <h1>Disciplina</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="name_discipline">Nombre</label>
+    <input class="form-control" id="name_discipline" type="text" placeholder="Ingrese el nombre de la disciplina">
+  </div>
+  </div>
+  </p>
+  <button type="button" id= "insert_discipline"class="btn btn-default">Insertar</button>  
 </div>
+
+<!-- Create athlete-->
 <div id="create_athlete" class="container-fluid">
   <h1>Deportista</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="student_code">Codigo Estudiante</label>
+    <input class="form-control" id="student_code" type="text" placeholder="Ingrese el codigo del estudiante">
+  </div>
+  <div class="col-xs-2">
+    <label for="a_discipline">Disciplina</label>
+    <input class="form-control" id="a_discipline" type="text" placeholder="Ingrese la disciplina">
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="a_equipo">Equipo</label>
+    <input class="form-control" id="a_equipo" type="text" placeholder="Ingrese el equipo del estudiante">
+  </div>
+  <div class="col-xs-2">
+    <label for="a_points">Puntos</label>
+    <input class="form-control" id="a_points" type="text" placeholder="Ingrese los puntos iniciales">
+  </div>
+  <div class="col-xs-2">
+    <label for="a_banns">Amonestaciones</label>
+    <input class="form-control" id="a_banns" type="text" placeholder="Ingrese la cantidad de amonestaciones">
+  </div>
+  </div>
+  </p>
+  <button type="button" id= "insert_athlete"class="btn btn-default">Insertar</button>
 </div>
 
 </body>
