@@ -63,7 +63,6 @@ router.get('/', function(req, res, next) {
 	      
 	      return connection.query('INSERT INTO deportista (cod_Est,cod_Disciplina,puntos_anotados, cod_equipo, amonestaciones) VALUES ('+v_codEstDepor+', '+v_discDepor+','+v_punDepor+','+v_equipoDepor+','+v_amonDepor+');', function(err, results) {
 	        if (err) return next(err);
-	        
 	      });
   
 		});

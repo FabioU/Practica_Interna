@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var testtable = require('./routes/testtable');
-var tournaments = require('./routes/tournaments');
+var update = require('./routes/update');
 var create = require('./routes/create');
 
 
@@ -41,7 +41,7 @@ app.use(myConnection(mysql, dbOptions, 'pool'));
 app.use('/', index);
 app.use('/users', users);
 app.use('/testtable', testtable);
-app.use('/torneos', tournaments);
+app.use('/update', update);
 app.use('/create', create);
 
 

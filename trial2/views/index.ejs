@@ -44,21 +44,28 @@
     },{scope: 'publish_actions'});
    }*/
    function login(){
-    FB.getLoginStatus(function(response){
+    FB.login(function(response){
       if (response.status == 'connected'){
           document.getElementById('demo').innerHTML = 'we are connected';
           document.getElementById('login').style.visibility = 'hidden';
         }else if (response.status == 'not_authorized'){
           document.getElementById('demo').innerHTML = 'we are not logged in';
+          
         } else{
           document.getElementById('demo').innerHTML = 'you are not logged into facebook';
         } 
-    },{scope: 'publish_actions'});
+    },{scope: 'publish_actions,publish_pages,manage_pages'});
 
    }
    function post(){
-     FB.api('/me/feed', 'post',{message: 'logre publicar algo asufafa'}, function(response){
-          document.getElementById('demo').innerHTML = response.id;
+    var accessT = "EAAHjZAxqVv9IBALBQFIRO6ZCxW0jRRT5AiyXdOiZBlBUutO5ZBlsvAwN0wzmlLkvtsgdF0VsOrj1t6lRxLitrECUl2UsBnQMtm9t4GKeS4hfFnQHXv3RcXe4PrmooUibhIvUXW6LQuCPPc5GGlOFtw1JaJOiPWl4H2TZAundHYSHTXk6vZBjnPnKPygW7UDL0sON1d3LYZBRgZDZD";
+
+     FB.api('/1598726800206987/feed', 'post',{message: 'Tres Tristes Tigres', access_token : accessT }, function(response){
+          if (response.hasOwnProperty("error")) {
+        alert("Error: " + response.error.message);
+    } else {
+        //Success!
+    }
         });
 
    }
@@ -74,7 +81,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/torneos">Torneos <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/update">Actualizar <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/create">Crear</a>
