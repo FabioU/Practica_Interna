@@ -13,7 +13,7 @@
   }
   #create_team {padding-top:100px;height:500px;color: #fff; background-color: #1E88E5;}
   #create_tournament {padding-top:100px;height:500px;color: #fff; background-color: #673ab7;}
-  #create_fixture {padding-top:100px;height:500px;color: #fff; background-color: #ff9800;}
+  #create_game {padding-top:100px;height:500px;color: #fff; background-color: #ff9800;}
   #create_discipline {padding-top:50px;height:300px;color: #fff; background-color: #00bcd4;}
   #create_athlete {padding-top:100px;height:500px;color: #fff; background-color: #009688;}
   </style>
@@ -64,11 +64,11 @@
         <ul class="nav navbar-nav">
           <li><a href="#create_team">Crear Equipos</a></li>
           <li><a href="#create_tournament">Crear Torneo</a></li>
-          <li><a href="#create_fixture">Crear Fixture</a></li>
+          <li><a href="#create_game">Crear Partido</a></li>
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Extras <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#create_discipline">Disciplina</a></li>
-              <li><a href="#create_athlete">Deportista</a></li>
+              <li><a href="#create_discipline">Crear Disciplina</a></li>
+              <li><a href="#create_athlete">Crear Deportista</a></li>
             </ul>
           </li>
         </ul>
@@ -135,9 +135,46 @@
    <button type="button" id= "insert_tournament" class="btn btn-default" onclick="insertarTorneo()">Insertar</button>
 </div>
 
-<!-- Create fixture-->
-<div id="create_fixture" class="container-fluid">
-  <h1>Fixture</h1>
+<!-- Create Game-->
+<div id="create_game" class="container-fluid">
+  <h1>Partido</h1>
+  <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="name_game">Torneo</label>
+    <input class="form-control" id="name_game" type="text" placeholder="Ingrese el nombre del Torneo">
+  </div>
+  <div class="col-xs-2">
+    <label for="etapa_game">Etapa</label>
+    <input class="form-control" id="etapa_game" type="text" placeholder="Ingrese la Etapa">
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="date_game">Fecha</label>
+    <input class="form-control" id="date_game" type="text" placeholder="Año/Mes/Dia">
+  </div>
+    <div class="col-xs-2">
+    <label for="hour_game">Hora</label>
+    <input class="form-control" id="hour_game" type="text" placeholder="Ingrese la Hora">
+  </div>
+  </div>
+  <div class="form-group row">
+  	<div class="col-xs-2">
+    <label for="team1_game">Equipo 1</label>
+    <input class="form-control" id="team1_game" type="text" placeholder="Ingrese El Equipo 1">
+  	</div>
+  	<div class="col-xs-2">
+    <label for="team2_game">Equipo 2</label>
+    <input class="form-control" id="team2_game" type="text" placeholder="Ingrese El Equipo 2">
+  	</div>
+  	<div class="col-xs-2">
+    <label for="serie_game">Serie</label>
+    <input class="form-control" id="serie_game" type="text" placeholder="Ingrese La Serie">
+  	</div>
+  </div>
+
+</p>
+   <button type="button" id= "insert_tournament" class="btn btn-default" onclick="insertarTorneo()">Insertar</button>
 </div>
 
 <!-- Create discipline-->
